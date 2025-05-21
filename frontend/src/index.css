@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #54255b;
+  --primary-dark: #1f1529;
+  --gold: #ffd700;
+  --gold-light: #fff3a0;
+  --red: #e50000;
+  --green: #00cb00;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white !important;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
+}
+
+@layer components {
+  .slot-machine {
+    @apply bg-purple-900 shadow-xl rounded-xl p-4 border-4 border-yellow-400 overflow-hidden;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.2),
+      inset 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .slot-window {
+    @apply bg-gradient-to-b from-gray-800 to-black border-2 border-yellow-500 rounded-lg overflow-hidden;
+  }
+
+  .casino-btn {
+    @apply px-6 py-3 font-bold text-lg rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg;
+  }
+
+  .btn-spin {
+    @apply casino-btn bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 text-white;
+  }
+
+  .btn-cashout {
+    @apply casino-btn bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-300 hover:to-yellow-500 text-black;
+  }
+}
